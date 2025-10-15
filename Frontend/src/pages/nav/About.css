@@ -1,0 +1,218 @@
+/* ====================== General Page Styles ====================== */
+.about-page-container {
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* ====================== Hero Section ====================== */
+.about-hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Main background image */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/hero.jpg') center/cover no-repeat;
+  background-attachment: fixed; /* subtle parallax */
+  z-index: 0;
+  transition: transform 15s ease;
+}
+
+/* Secondary overlay image + gradient */
+.hero-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('/hero2.jpg') center/cover no-repeat;
+  opacity: 0.5;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 15s ease;
+}
+
+/* Zoom effect on hover */
+.about-hero:hover::before,
+.hero-overlay::before:hover {
+  transform: scale(1.05);
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 2; /* text above both images */
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-content h1 span {
+  color: #00bfff;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* ====================== Section Titles ====================== */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  color: #0f172a;
+  overflow: hidden;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #00bfff;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  animation: scaleX 1s ease forwards;
+}
+
+/* ====================== Mission Section ====================== */
+.mission-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 0 80px;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transition: transform 0.4s;
+}
+
+.mission-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ====================== Values Section ====================== */
+.values-section {
+  background-color: #f0f4ff;
+  padding: 60px 20px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.value-card h3 {
+  color: #00bfff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ====================== Team Section ====================== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding: 0 80px 80px 80px;
+}
+
+.team-card {
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+
+.team-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #0f172a;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* ====================== Animations ====================== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleX {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* ====================== Mobile Responsiveness ====================== */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+  .mission-content-grid { grid-template-columns: 1fr; gap: 30px; padding: 0 20px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; padding: 0 20px; }
+  .section-title { font-size: 2rem; }
+}

@@ -1,0 +1,88 @@
+/* src/components/ServicesSection.css */
+.services-section-container {
+    padding: 80px 80px; /* Matching desktop padding from Navbar/Hero */
+    background-color: #f7f9fc; /* Light background for contrast with Hero */
+}
+
+.services-section-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center; /* Centering the heading for better layout */
+}
+
+.services-cards-grid {
+    display: grid;
+    /* 4 equal columns on desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft initial shadow */
+    cursor: pointer;
+    
+    /* Animation Setup */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation (Subtle Lift and Shadow) */
+.service-card:hover {
+    transform: translateY(-8px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+.service-icon-wrapper {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.service-icon {
+    font-size: 40px; /* Use size to mimic icon prominence */
+    /* If using actual SVG icons, style them here */
+    color: #007bff; /* Primary blue color */
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.service-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS (<= 768px) --- */
+/* ========================================= */
+@media (max-width: 768px) {
+    .services-section-container {
+        padding: 40px 20px; /* Reduced padding for mobile */
+    }
+
+    .services-section-heading {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: center; /* Center heading on mobile */
+    }
+    
+    .services-cards-grid {
+        /* Collapse to a single column */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .service-card {
+        /* Ensure padding looks good on small devices */
+        padding: 25px;
+    }
+}

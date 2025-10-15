@@ -1,0 +1,101 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1a2430;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navbar-logo {
+    color: #00bfff;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links li {
+    list-style: none;
+    position: relative;
+}
+
+.navbar-links li a,
+.navbar-links li Link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s;
+    position: relative;
+}
+
+/* --- Dot + underline effect --- */
+.navbar-links li a::before,
+.navbar-links li Link::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00bfff;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-links li a:hover::before,
+.navbar-links li Link:hover::before {
+    opacity: 1;
+    bottom: -4px;
+}
+
+.navbar-links li a::after,
+.navbar-links li Link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #00bfff;
+    transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li Link:hover::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+}
+
+/* --- Mobile --- */
+@media(max-width: 768px) {
+    .navbar-container {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+    .navbar-links {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,480 @@
+/* src/components/ProductsSection.css - FINAL FIXED CENTERING */
+
+.products-section-container {
+    background-color: #f7f9fc;
+    padding: 50px 0; /* Keep vertical spacing */
+}
+
+.products-content-wrapper {
+    /* Centers the main content area */
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 80px; /* Internal horizontal padding for content */
+}
+
+.products-main-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- Tab Navigation Styling --- */
+.tab-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.tab-button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-button.active {
+    background-color: #007bff; 
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Product Grid Styling (4 items per row) --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+/* Product Card Styling (Retained for individual item sharpness) */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-specs {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-rating {
+    font-size: 14px;
+    color: gold;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.view-details-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* --- Coming Soon Card Styling --- */
+.coming-soon-wrapper {
+    grid-column: 1 / -1; 
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.coming-soon-card {
+    background-color: #f0f8ff;
+    border: 2px dashed #007bff;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.coming-soon-card h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.coming-soon-card p {
+    color: #555;
+}
+
+/* Loader Ring Animation (Subtle 'Coming Soon' Animation) */
+.loader-ring {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(0, 123, 255, 0.2);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Pagination Dots (Hidden as we show all 12 items) --- */
+.pagination-dots {
+    display: none; 
+}
+
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS (<= 768px) --- */
+/* ========================================= */
+@media (max-width: 768px) {
+    .products-section-container {
+        margin: 20px 0; 
+        padding: 20px 0;
+    }
+
+    .products-content-wrapper {
+        padding: 0 20px;
+    }
+
+    .products-main-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .tab-navigation {
+        justify-content: center;
+        gap: 10px 8px;
+    }
+    
+    .tab-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .product-card {
+        display: flex;
+        text-align: left;
+        padding: 15px;
+        align-items: center;
+    }
+    
+    .product-image {
+        width: 90px;
+        height: 90px;
+        margin-right: 15px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .product-info-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 90px;
+    }
+
+    .product-details {
+        margin-bottom: 5px;
+    }
+    
+    .product-name {
+        font-size: 17px;
+    }
+
+    .product-price {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .view-details-button {
+        align-self: flex-end; 
+/* src/components/ProductsSection.css - FINAL FIXED CENTERING */
+
+.products-section-container {
+    background-color: #f7f9fc;
+    padding: 50px 0; /* Keep vertical spacing */
+}
+
+.products-content-wrapper {
+    /* Centers the main content area */
+    max-width: 1400px;
+    margin: 0 auto; 
+    padding: 0 80px; /* Internal horizontal padding for content */
+}
+
+.products-main-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* --- Tab Navigation Styling --- */
+.tab-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.tab-button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-button.active {
+    background-color: #007bff; 
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+
+/* --- Product Grid Styling (4 items per row) --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+/* Product Card Styling (Retained for individual item sharpness) */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product-specs {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-rating {
+    font-size: 14px;
+    color: gold;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.view-details-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* --- Coming Soon Card Styling --- */
+.coming-soon-wrapper {
+    grid-column: 1 / -1; 
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.coming-soon-card {
+    background-color: #f0f8ff;
+    border: 2px dashed #007bff;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.coming-soon-card h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.coming-soon-card p {
+    color: #555;
+}
+
+/* Loader Ring Animation (Subtle 'Coming Soon' Animation) */
+.loader-ring {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(0, 123, 255, 0.2);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Pagination Dots (Hidden as we show all 12 items) --- */
+.pagination-dots {
+    display: none; 
+}
+
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS (<= 768px) --- */
+/* ========================================= */
+@media (max-width: 768px) {
+    .products-section-container {
+        margin: 20px 0; 
+        padding: 20px 0;
+    }
+
+    .products-content-wrapper {
+        padding: 0 20px;
+    }
+
+    .products-main-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .tab-navigation {
+        justify-content: center;
+        gap: 10px 8px;
+    }
+    
+    .tab-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .product-card {
+        display: flex;
+        text-align: left;
+        padding: 15px;
+        align-items: center;
+    }
+    
+    .product-image {
+        width: 90px;
+        height: 90px;
+        margin-right: 15px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .product-info-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 90px;
+    }
+
+    .product-details {
+        margin-bottom: 5px;
+    }
+    
+    .product-name {
+        font-size: 17px;
+    }
+
+    .product-price {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .view-details-button {
+        align-self: flex-end; 
+        padding: 5px 15px;
+    }
+}    }
+}

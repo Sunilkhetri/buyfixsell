@@ -1,0 +1,149 @@
+/* src/pages/NavService.css (Renamed from ServicesPage.css) */
+
+.services-page-container {
+    min-height: 80vh;
+}
+
+.services-hero {
+    background-color: #007bff; /* Primary blue for a strong service focus */
+    color: white;
+    padding: 100px 80px 80px 80px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.services-hero p {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.services-main-grid {
+    max-width: 1200px;
+    margin: 50px auto 80px auto;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+    gap: 40px;
+}
+
+.service-block {
+    background-color: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.service-block:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.service-page-icon {
+    font-size: 32px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.service-icon-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.service-summary {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-details-list li {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background-color: #f7f9fc;
+    text-align: center;
+    padding: 60px 80px;
+}
+
+.cta-banner h2 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.cta-banner p {
+    font-size: 18px;
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Yellow accent for high visibility */
+    color: #0f172a;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 60px 20px 40px 20px;
+    }
+    .services-hero h1 {
+        font-size: 32px;
+    }
+    .services-main-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .cta-banner {
+        padding: 40px 20px;
+    }
+    .cta-banner h2 {
+        font-size: 28px;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
