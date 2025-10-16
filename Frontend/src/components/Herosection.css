@@ -1,214 +1,248 @@
 .hero {
-  position: relative;
-  height: 90vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)),
-    url("/hero4.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 0 60px;
-  overflow: hidden;
+    position: relative;
+    height: 90vh;
+    /* Note: Update the path to your actual image location if needed */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)),
+        url("/hero4.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 60px;
+    overflow: hidden;
 }
 
 .hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
 }
 
 .hero-left {
-  max-width: 600px;
+    max-width: 600px;
 }
 
 .hero-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1.2rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
 }
 
 .highlight {
-  color: #4dc2ff;
+    color: #4dc2ff;
 }
 
 .hero-services {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .hero-services li {
-  margin: 0.4rem 0;
+    margin: 0.4rem 0;
 }
 
 .check-icon {
-  color: #4dc2ff;
-  margin-right: 8px;
+    color: #4dc2ff;
+    margin-right: 8px;
 }
 
 .hero-btn {
-  background-color: #4dc2ff;
-  border: none;
-  padding: 14px 28px;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.3s;
+    background-color: #4dc2ff;
+    border: none;
+    padding: 14px 28px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .hero-btn:hover {
-  background-color: #2a93d1;
-  transform: translateY(-2px);
+    background-color: #2a93d1;
+    transform: translateY(-2px);
 }
 
 /* Right section - contact card */
 .contact-card {
-  background-color: rgba(0, 123, 255, 0.85);
-  border-radius: 20px;
-  padding: 2rem;
-  text-align: center;
-  color: white;
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+    background-color: rgba(0, 123, 255, 0.85);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .glow-circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
 }
 
 .phone-svg {
-  width: 36px;
-  height: 36px;
-  color: white;
+    width: 36px;
+    height: 36px;
+    color: white;
 }
 
 .phone-number {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .whatsapp-inline {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 8px 15px;
-  border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 15px;
+    border-radius: 8px;
 }
 
 .whatsapp-inline-icon {
-  width: 24px;
-  height: 24px;
-  color: #25d366;
+    width: 24px;
+    height: 24px;
+    color: #25d366;
 }
 
 .whatsapp-inline-text {
-  color: #e6ffe6;
-  text-decoration: none;
-  font-weight: 500;
+    color: #e6ffe6;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .whatsapp-inline-text:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Floating contact icons */
 .floating-icons {
-  position: fixed;
-  right: 20px;
-  bottom: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 100;
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
 }
 
 .float-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
 }
 
 .float-btn svg {
-  width: 28px;
-  height: 28px;
+    width: 28px;
+    height: 28px;
 }
 
 .float-btn:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .phone-btn {
-  background-color: #007bff;
+    background-color: #007bff;
 }
 
 .whatsapp-btn {
-  background-color: #25d366;
+    background-color: #25d366;
 }
 
-/* Responsive */
+/* =================================== */
+/* MOBILE STYLES (@media max-width: 900px) */
+/* (Optimized Centering for all content) */
+/* =================================== */
+
 @media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-    height: auto;
-    padding: 60px 20px 100px;
-    text-align: center;
-  }
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px 100px;
+        text-align: center;
+    }
 
-  .hero-content {
-    flex-direction: column;
-    align-items: center;
-  }
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .hero-title {
-    font-size: 2.1rem;
-  }
+    /* --- HERO LEFT ADJUSTMENTS (Centering Title, List, and Button) --- */
+    .hero-left {
+        max-width: 100%;
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        align-items: center; /* Centers children blocks (title, list, button) */
+    }
 
-  .hero-right {
-    margin-top: 2rem;
-  }
+    .hero-title {
+        font-size: 2.1rem;
+        text-align: center;
+    }
 
-  .contact-card {
-    width: 100%;
-    max-width: 360px;
-  }
+    .hero-services {
+        text-align: left; 
+        margin: 1rem auto 2rem auto; /* Auto margins center the UL block */
+        max-width: 320px; 
+        padding-left: 0;
+    }
+    
+    .hero-services li {
+        text-align: left;
+    }
 
-  .floating-icons {
-    right: 15px;
-    bottom: 20px;
-  }
+    /* --- HERO RIGHT ADJUSTMENTS (Contact Card Centering) --- */
+    .hero-right {
+        margin-top: 2.5rem; /* Added vertical space */
+        margin-bottom: 0;
+        width: 100%;
+        
+        /* CRITICAL: Centers the .contact-card within the .hero-right container */
+        display: flex; 
+        justify-content: center; 
+    }
 
-  .float-btn {
-    width: 50px;
-    height: 50px;
-  }
+    .contact-card {
+        width: 100%;
+        max-width: 360px; 
+    }
 
-  .float-btn svg {
-    width: 24px;
-    height: 24px;
-  }
+    /* Floating icons (keep as is) */
+    .floating-icons {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .float-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .float-btn svg {
+        width: 24px;
+        height: 24px;
+    }
 }

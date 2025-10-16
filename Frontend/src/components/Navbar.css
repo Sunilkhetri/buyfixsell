@@ -1,3 +1,7 @@
+/* =================================== */
+/* DESKTOP STYLES (Default)            */
+/* =================================== */
+
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -24,6 +28,15 @@
     color: #00bfff;
 }
 
+/* --- Menu Icon (Hidden on Desktop) --- */
+.menu-icon {
+    display: none; /* Hidden by default on desktop */
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 101; 
+}
+
+/* --- Desktop Link Styles --- */
 .navbar-links {
     display: flex;
     gap: 30px;
@@ -45,7 +58,7 @@
     position: relative;
 }
 
-/* --- Dot + underline effect --- */
+/* --- Dot + underline effect (Desktop Hover) --- */
 .navbar-links li a::before,
 .navbar-links li Link::before {
     content: '';
@@ -87,15 +100,97 @@
     transform: translateX(0);
 }
 
-/* --- Mobile --- */
+
+/* =================================== */
+/* MOBILE STYLES (@media max-width: 768px) */
+/* (Single-Row, MINIMAL GAP Dropdown)   */
+/* =================================== */
+
 @media(max-width: 768px) {
     .navbar-container {
         padding: 10px 20px;
-        flex-wrap: wrap;
     }
+
+    /* Show the hamburger icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* --- Full-Width Horizontal Dropdown Styling --- */
     .navbar-links {
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
+        /* Positioning below the sticky header */
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        width: 100%; 
+        height: auto; 
+        
+        /* Hiding/Showing with max-height for smooth transition */
+        max-height: 0; 
+        overflow: hidden; 
+        
+        /* Layout: Single Row */
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: nowrap; 
+        
+        /* Set content distribution to ensure maximum spread and fill */
+        justify-content: space-between; 
+        
+        /* Appearance */
+        background-color: #1a2430; 
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+        transition: max-height 0.3s ease-in-out;
+        z-index: 90; 
+        
+        /* CRITICAL: Remove all padding/margin that might create a gap around the container */
+        padding: 0; 
+        margin: 0; /* Add margin 0 to override any default browser list margin */
+    }
+
+    /* State for when the menu is open */
+    .navbar-links.open {
+        max-height: 50px; 
+        overflow-x: hidden;
+    }
+
+    /* Style the individual links for single-row fit */
+    .navbar-links li {
+        /* Allow links to stretch and fill the space equally */
+        flex-grow: 1; 
+        flex-shrink: 1; 
+        
+        /* Set width to zero and let flex-grow handle size */
+        width: 0; 
+        
+        /* CRITICAL: Remove all horizontal padding and margins */
+        padding: 10px 0; 
+        margin: 0;
+        text-align: center; 
+        list-style: none;
+        border-top: none; 
+    }
+
+    /* Style the links themselves */
+    .navbar-links li a {
+        display: block;
+        padding: 0;
+        color: #ffffff;
+        
+        /* Keep small font size */
+        font-size: 0.85rem; 
+    }
+    
+    /* Remove desktop hover effects */
+    .navbar-links li a::before,
+    .navbar-links li Link::before,
+    .navbar-links li a::after,
+    .navbar-links li Link::after {
+        display: none; 
+    }
+    
+    /* Better visual feedback on tap */
+    .navbar-links li:active {
+        background-color: rgba(255, 255, 255, 0.1);
     }
 }
