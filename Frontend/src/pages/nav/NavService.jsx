@@ -1,7 +1,7 @@
 // src/pages/NavService.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./NavService.css";   // if the file is named NavService.css
+import "./NavService.css";
 
 const detailedServices = [
     {
