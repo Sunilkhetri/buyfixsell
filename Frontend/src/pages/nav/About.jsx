@@ -1,4 +1,5 @@
 // src/pages/About.jsx
+// chck
 import React from 'react';
 import './About.css';
 
