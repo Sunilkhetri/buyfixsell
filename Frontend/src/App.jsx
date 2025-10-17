@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import About from "./pages/nav/About";
-import NavServices from "./pages/nav/NavService";
+import NavService from "./pages/nav/NavService";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         {/* Wrap each page inside MainLayout */}
         <Route path="/" element={<MainLayout><Home /></MainLayout>} />
-        <Route path="/services" element={<MainLayout><NavServices /></MainLayout>} />
+        <Route path="/services" element={<MainLayout><NavService /></MainLayout>} />
         <Route path="/about" element={<MainLayout><About /></MainLayout>} />
       </Routes>
     </Router>

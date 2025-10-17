@@ -1,4 +1,4 @@
-// src/pages/NavService.jsx
+// src/pages/nav/NavService.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navservice.css';
