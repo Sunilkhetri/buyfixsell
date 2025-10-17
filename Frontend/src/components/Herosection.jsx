@@ -32,7 +32,7 @@ const HeroSection = () => {
           <button
             className="hero-btn"
             onClick={() =>
-              window.open("https://wa.me/9970103894", "_blank", "noopener noreferrer")
+              window.open("https://wa.me/919970103894", "_blank", "noopener noreferrer")
             }
           >
             Contact Us on WhatsApp
@@ -56,7 +56,7 @@ const HeroSection = () => {
                 <path d="M16 2.667a13.333 13.333 0 0 0-11.34 20.35L3.334 29.333l6.52-1.983A13.3 13.3 0 1 0 16 2.667zm0 24a10.62 10.62 0 0 1-5.66-1.64l-.4-.24-3.88 1.18 1.2-3.74-.25-.38A10.67 10.67 0 1 1 16 26.667zM22.04 19.1c-.33-.17-1.94-.95-2.24-1.06s-.52-.16-.74.17c-.22.33-.85 1.06-1.04 1.28s-.38.25-.7.08a8.5 8.5 0 0 1-2.5-1.53 9.4 9.4 0 0 1-1.75-2.18c-.18-.31-.02-.48.14-.65.15-.15.33-.38.5-.56.17-.18.22-.31.33-.52.11-.21.05-.4-.03-.56s-.74-1.78-1.02-2.43c-.27-.65-.55-.56-.74-.57H10.2c-.22 0-.57.08-.87.4s-1.15 1.13-1.15 2.75 1.18 3.19 1.35 3.42c.17.22 2.33 3.55 5.64 4.97a19.2 19.2 0 0 0 1.89.7c.8.25 1.53.21 2.1.13.64-.1 1.94-.8 2.22-1.57s.27-1.43.18-1.57-.29-.22-.61-.39z" />
               </svg>
               <a
-                href="https://wa.me/9970103894"
+                href="https://wa.me/919970103894"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="whatsapp-inline-text"
@@ -77,7 +77,7 @@ const HeroSection = () => {
         </a>
 
         <a
-          href="https://wa.me/9970103894"
+          href="https://wa.me/919970103894"
           target="_blank"
           rel="noopener noreferrer"
           className="float-btn whatsapp-btn"
