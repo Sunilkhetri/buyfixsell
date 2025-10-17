@@ -1,7 +1,20 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
+  const location = useLocation();
+
+  const scrollToProductSection = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      const element = document.getElementById("product-section");
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#product-section";
+    }
+  };
+
   return (
     <footer className="footer-container">
       {/* === MAIN FOOTER GRID === */}
@@ -21,10 +34,9 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/services">Services</a></li>
-            {/* Scroll to ProductsSection on the current page */}
-            <li><a href="#product-section">Used Laptops</a></li>
-            <li><a href="/about">About Us</a></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><a href="#product-section" onClick={scrollToProductSection}>Used Laptops</a></li>
+            <li><Link to="/about">About Us</Link></li>
           </ul>
         </div>
 
